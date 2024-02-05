@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import numpy
 
-# load a pretrained YOLOv8n model
+
 model = YOLO("weights/best.pt", "v8")  
 
 # predict on an image
