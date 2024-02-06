@@ -8,11 +8,11 @@ git clone https://github.com/sumit2011/underwater-object-detection
 
 ## Step 2:
 > for linux
-### Create virtual enviroment.
+### Create virtual environment.
 ```bash
 virtualenv myenv
 ```
-### Activate virtual enviroment.
+### Activate virtual environment.
 ```bash
 source myenv/bin/activate
 ```
