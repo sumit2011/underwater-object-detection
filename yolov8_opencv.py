@@ -1,20 +1,15 @@
 import random
-
 import cv2
 import numpy as np
 from ultralytics import YOLO
 
 # opening the file in read mode
 my_file = open("utils/coco.txt", "r")
-# reading the file
 data = my_file.read()
-# replacing end splitting the text | when newline ('\n') is seen.
 class_list = data.split("\n")
 my_file.close()
 
-# print(class_list)
-
-# Generate random colors for class list
+# Generate random colors for class list for better visualisation
 detection_colors = []
 for i in range(len(class_list)):
     r = random.randint(0, 255)
@@ -22,36 +17,27 @@ for i in range(len(class_list)):
     b = random.randint(0, 255)
     detection_colors.append((b, g, r))
 
-# load a pretrained YOLOv8n model
-model = YOLO("weights/best.pt", "v8.1")
+# load the yolo model which is trained on the costom dataset
+model = YOLO("weights/best.pt")
 
-# Vals to resize video frames | small frame optimise the run
 frame_wid = 640
 frame_hyt = 480
 
-# cap = cv2.VideoCapture(1)
-cap = cv2.VideoCapture("inference/videos/___.MP4")
+cap = cv2.VideoCapture("uploads/videos/video1.mp4")
 
 if not cap.isOpened():
     print("Cannot open camera")
     exit()
 
 while True:
-    # Capture frame-by-frame
     ret, frame = cap.read()
-    # if frame is read correctly ret is True
-
     if not ret:
         print("Can't receive frame (stream end?). Exiting ...")
         break
 
-    #  resize the frame | small frame optimise the run
-    # frame = cv2.resize(frame, (frame_wid, frame_hyt))
-
     # Predict on image
     detect_params = model.predict(source=[frame], conf=0.45, save=False)
 
-    # Convert tensor array to numpy
     DP = detect_params[0].numpy()
     print(DP)
 
@@ -60,7 +46,7 @@ while True:
             print(i)
 
             boxes = detect_params[0].boxes
-            box = boxes[i]  # returns one box
+            box = boxes[i]  
             clsID = box.cls.numpy()[0]
             conf = box.conf.numpy()[0]
             bb = box.xyxy.numpy()[0]
@@ -92,6 +78,5 @@ while True:
     if cv2.waitKey(1) == ord("q"):
         break
 
-# When everything done, release the capture
 cap.release()
 cv2.destroyAllWindows()
