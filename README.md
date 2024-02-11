@@ -1,7 +1,7 @@
 # Underwater-Object-Detection using YOLOv8.1
 
 ## Step 1:
-### Clone this repo locally.
+### Clone the repository.
 ```bash
 git clone https://github.com/sumit2011/underwater-object-detection
 ```
