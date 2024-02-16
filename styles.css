@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+img {
+    height: 99.42vh;
+    width: 1535px;
+}
+.relative {
+    position: relative;
+}
+
+.front {
+    position: absolute;
+    top: 5%;
+}
+
+h1 {
+    padding: 10px  28%;
+    text-decoration: underline;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    padding: 30px;
+    font-family: monospace;
+    font-size: 30px;
+    padding-left: 12%;
+}
+
+p {
+    width: 40%;
+    font-size: 20px;
+    padding-left: 20px;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p:hover {
+    font-size: 24px;
+    text-decoration: underline;
+    color: peachpuff;
+}
+
+button {
+    width: 300px;
+    color: white;
+    background: transparent;
+    border: solid 5px red;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 36px;
+    margin-left: 39%;
+    margin-top: 100px;
+}
+
+button:hover {
+    font-size: 40px;
+    text-decoration: underline;
+    opacity: 60%;
+}
