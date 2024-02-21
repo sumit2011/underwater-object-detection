@@ -35,76 +35,41 @@ def predict_img():
             detection_output = model.predict(source=img, conf=0.25, save=True) 
             # yolo = YOLO('best.pt')
             # detections = yolo.predict(image, save=True)
-            return send_from_directory('runs/detect', f.filename)
+            # return send_from_directory('runs/detect', f.filename)
+            return display (f.filename)
             # return send_file(os.path.join('runs/detect', f.filename), mimetype='image/jpg')
             # return send_from_directory('runs/detect', detection_output)
         else:
             return "Invalid file format"
         
+    folder_path = 'runs/detect'
+    subfolders = [f for f in os.listdir (folder_path) if os.path.isdir (os.path.join (folder_path, f))]
+    latest_subfolder = max (subfolders, key=lambda x: os. path.getctime (os.path.join (folder_path, x)))
+    image_path = folder_path+'/'+latest_subfolder+'/'+f.filename
+    return render_template('index.html', image_path=image_path)
 
-        
-# @app.route('/<path:filename>')
-# def display(filename):
-#     folder_path = 'runs/detect'
-#     subfolders = [f for f in os.listdir(folder_path) if os.path.isdir(os.path.join(folder_path, f))]    
-#     latest_subfolder = max(subfolders, key=lambda x: os.path.getctime(os.path.join(folder_path, x)))    
-#     directory = folder_path+'/'+latest_subfolder
-#     print("printing directory: ",directory)  
-#     file_extension = filename.rsplit('.', 1)[1].lower()
-#     print("printing file extension from display function : ",file_extension)
-#     environ = request.environ
-#     if file_extension == 'jpg':      
-#         return send_from_directory(directory,filename,environ)
-#     else:
-#         return "Invalid file format"
-    
+
+
+
 @app.route('/<path:filename>')
 def display(filename):
     folder_path = 'runs/detect'
-    subfolders = [f for f in os.listdir(folder_path) if os.path.isdir(os.path.join(folder_path, f))]
-    latest_subfolder = max(subfolders, key=lambda x: os.path.getctime(os.path.join(folder_path, x)))
+    subfolders = [f for f in os.listdir (folder_path) if os. path.isdir (os.path.join (folder_path, f))]
+    latest_subfolder = max (subfolders, key=lambda x: os.path.getctime (os.path.join(folder_path, x)))
     directory = folder_path+'/'+latest_subfolder
-    print("printing directory: ", directory)
-    files = os.listdir(directory)
-    latest_file = files[0]
-    print(latest_file)
-    filename = os.path.join(folder_path, latest_subfolder, latest_file)
+    print("printing directory: ",directory)
+    files = os.listdir (directory)
+    latest_file = files [0]
+
+    print (latest_file)
+
+    filename = os. path.join(folder_path, latest_subfolder, latest_file)
+    
     file_extension = filename.rsplit('.', 1)[1].lower()
     if file_extension == 'jpg':
-        return send_from_directory(directory, latest_file)  # shows the result in separate tab
+        return send_from_directory(directory,latest_file) #shows the result in seperate tab
     else:
         return "Invalid file format"
-
-
-
-# @app.route('/<path:filename>')
-# def display_latest_image(filename):
-#     folder_path = 'runs/detect'
-
-#     # Get the latest subfolder in the specified directory
-#     subfolders = [f for f in os.listdir(folder_path) if os.path.isdir(os.path.join(folder_path, f))]
-#     if not subfolders:
-#         return "No subfolders found", 404
-
-#     latest_subfolder = max(subfolders, key=lambda x: os.path.getctime(os.path.join(folder_path, x)))
-#     directory = os.path.join(folder_path, latest_subfolder)
-
-#     # Get the latest file in the latest subfolder
-#     files = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
-#     if not files:
-#         return "No files found", 404
-
-#     latest_file = max(files, key=lambda x: os.path.getctime(os.path.join(directory, x)))
-
-#     # Check if the latest file is a JPG
-#     file_extension = latest_file.rsplit('.', 1)[-1].lower()
-#     if file_extension == 'jpg':
-#         image_path = os.path.join(directory, latest_file)
-#         return render_template('display_image.html', image_path=image_path)
-#     else:
-#         return "Invalid file format", 400
-
-
 
 
 if __name__ == "__main__":
