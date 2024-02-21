@@ -15,8 +15,6 @@ def hello_world():
 
 
 
-
-
 @app.route("/", methods=["GET", "POST"])
 def predict_img():
     if request.method == "POST" and 'file' in request.files:
@@ -33,12 +31,9 @@ def predict_img():
             image = Image.open(io.BytesIO(frame))
             model = YOLO("weights/best.pt", "v8")  
             detection_output = model.predict(source=img, conf=0.25, save=True) 
-            # yolo = YOLO('best.pt')
-            # detections = yolo.predict(image, save=True)
             # return send_from_directory('runs/detect', f.filename)
             return display (f.filename)
             # return send_file(os.path.join('runs/detect', f.filename), mimetype='image/jpg')
-            # return send_from_directory('runs/detect', detection_output)
         else:
             return "Invalid file format"
         
