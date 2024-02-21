@@ -23,7 +23,7 @@ model = YOLO("weights/best.pt")
 frame_wid = 640
 frame_hyt = 480
 
-cap = cv2.VideoCapture("uploads/videos/video1.mp4")
+cap = cv2.VideoCapture("uploads/videos/video1.MP4")
 
 if not cap.isOpened():
     print("Cannot open camera")
