@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#216D77"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40sp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/uploadimage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.197" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30sp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="106dp"
+                    android:layout_height="46dp"
+                    android:background="@color/white"
+                    android:text="@string/Select"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.156"
+                    android:layout_marginStart="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView"
+                    app:layout_constraintVertical_bias="0.121" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="110dp"
+                    android:layout_height="49dp"
+                    android:background="@color/white"
+                    android:text="@string/Predict"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.715"
+                    android:layout_marginStart="70sp"
+                    app:layout_constraintStart_toEndOf="@+id/button"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView"
+                    app:layout_constraintVertical_bias="0.121" />
+            </LinearLayout>
+        </ScrollView>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="244dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="112dp"
+            android:text="@string/predictNpredict"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="italic"
+            android:layout_marginStart="80sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Aqua Scanner</string>
+    <string name="Select">Select</string>
+    <string name="Predict">Predict</string>
+    <string name="predictNpredict">Select and predict</string>
+    <string name="todo">TODO</string>
+</resources>
