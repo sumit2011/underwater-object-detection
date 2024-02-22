@@ -73,3 +73,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
     app.run(port=args.port)
 
+if __name__ == '__main__':
+    app.run(debug=True)

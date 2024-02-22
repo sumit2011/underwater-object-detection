@@ -1,28 +1,48 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detection</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Underwater Object Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <!-- <image src="{{ url_for('static', filename='images/image.jpg') }}"> -->
 </head>
 <body>
     <div class="relative">
-        <img src="./image.jpg" alt="image" />
         <div class="front">
-            <h1>Welcome to Underwater-Object-Detection webapp</h1>
+            <h1>Underwater Object Detection</h1>
             <h2>Explore the Depths with Cutting-Edge Underwater Object Detection</h2>
             <p> Dive into the fascinating world beneath the surface with AquaVision, 
             your gateway to advanced underwater object detection technology. We bring you innovative 
             solutions for exploring, monitoring, and understanding the mysteries of the deep sea.</p>
-            <button>Upload Image</button>
+<!--             
+            <section id="upload-section">
+                <label for="upload-input" id="upload-label">Upload Image:</label>
+                <input type="file" id="upload-input" accept="image/*">
+                <button id="detect-btn">Detect Image</button>
+            </section>
+             -->
+            <form class="form-signin col-lg-3" method=post enctype=multipart/form-data name=
+                <h1 class="h3 mb-3 font-weight-normal">Upload any image or video</h1> 
+            <input type="file" name="file" class="form-control-file" id="inputfile" >
+               <br/>
+              <button class="btn btn-block btn-default btn-sm" type="submit">Upload</button> 
+            <p class="mt-5 mb-3 text-muted">Built using Pytorch & Flask</p>
+            </form>
+            
+            <!-- <div style="padding: 20px;">
+                <img src="{{ url_for('display', filename=filename)}}
+            </div> -->
         </div>
     </div>
 </body>
-</html> -->
 
 
-<!DOCTYPE html>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,8 +53,8 @@
 <body>
     
     <section>
-        <!-- AI code-->
-                        <form class="form-signin col-lg-3" method=post enctype=multipart/form-data name=
+
+         <form class="form-signin col-lg-3" method=post enctype=multipart/form-data name=
                 <h1 class="h3 mb-3 font-weight-normal">Upload any image or video</h1> 
             <input type="file" name="file" class="form-control-file" id="inputfile" >
                <br/>
@@ -44,16 +64,10 @@
         
         </div>
         </div>
-        </div><!--/.card-body -->
         </div>
-        <!--/.card -->
+        </div>
+   
         </section>
 
 </body>
-</html>
-
-
-
-
-
-
+</html> -->
