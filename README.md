@@ -2,7 +2,7 @@
 ![image](static/images/1.png)  
 
 <p>
-The Underwater Object Detection WebApp is an intuitive online tool tailored for marine researchers, underwater explorers, and defense personnel. It employs advanced sonar technology and image processing algorithms to analyze uploaded sonar data or underwater images from ROVs and cameras. Users can detect and classify submerged objects such as wreckage or marine life, visualize results through interactive maps or image galleries, and access features like object tracking and measurement tools. With its user-friendly interface and powerful capabilities, the web app facilitates efficient underwater exploration, environmental monitoring, and maritime security efforts.
+The Underwater Object Detection WebApp is an intuitive online tool for marine researchers, underwater explorers. Users can detect and classify submerged objects such as wreckage or marine life, visualize results through interactive image galleries. With its user-friendly interface and powerful capabilities, the web app facilitates efficient underwater exploration.
 </p>
 
 ## Step 1:
