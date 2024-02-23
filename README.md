@@ -1,5 +1,5 @@
 # Underwater-Object-Detection using YOLOv8.1
-![image](static/images/1.png)  
+![image](static/images/2.png)  
 
 <p>
 The Underwater Object Detection WebApp is an intuitive online tool for marine researchers, underwater explorers. Users can detect and classify submerged objects such as wreckage or marine life, visualize results through interactive image galleries. With its user-friendly interface and powerful capabilities, the web app facilitates efficient underwater exploration.
