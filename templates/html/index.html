@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Under Water Object Detection</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../static/styles/style.css">
 </head>
 <body>
     <div class="container">
         <nav>
             <div>
                 <a href="/" class="logo">
-                    <img src="./house-solid.svg" alt="home" class="icons">
+                    <img src="../static/images/house-solid.svg" alt="home" class="icons">
                     <h1>Underwater-Object-Detection</h1>
                 </a>
             </div>
             <div class="rest">
                 <a href="https://github.com/sumit2011/underwater-object-detection">
-                    <img src="./github.svg" alt="github" class="icons">
+                    <img src="../static/images/github.svg" alt="github" class="icons">
                 </a>
                 <h2>About US</h2>
                 <h2>Contact Us</h2>
@@ -29,13 +29,16 @@
                 <h1>Detect Image Inside The Water</h1>
                 <p>100% Automatically</p>
             </section>
+            <form class="form-signin col-lg-3" method=post enctype=multipart/form-data name=
             <section id="upload-section">
                 <div class="moon">
                     <label for="upload-input" id="upload-label">Upload Image:</label>
-                    <input type="file" id="upload-input" accept="image/*">
+                    <input type="file" name="file" class="from-control-file" id="upload-input" >
                 </div>
-                <button id="detect-btn">Detect Image</button>
+                <!-- <button id="detect-btn">Detect Image</button> -->
+                <button id="detect-btn" class="btn btn-block btn-default btn-sm" type="submit">Upload</button> 
             </section>
+            </form> 
         </main>
         <div class="description">
             <h1>hey there</h1>

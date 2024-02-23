@@ -1,4 +1,6 @@
 # Underwater-Object-Detection using YOLOv8.1
+![image](static/images/1.png)  
+
 
 ## Step 1:
 ### Clone the repository.
