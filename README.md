@@ -30,5 +30,11 @@ pip install -r requirements.txt
 ## Step 5:
 ### Run the script.
 ```bash
-python -u yolov8_opencv.py
+python -u app.py
 ```
+## Step 6:
+```
+click on the link
+```
+
+
