@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return render_template('index.html')
+    return render_template('html/index.html')
 
 
 
@@ -55,14 +55,11 @@ def display(filename):
     print("printing directory: ",directory)
     files = os.listdir (directory)
     latest_file = files [0]
-
     print (latest_file)
-
     filename = os. path.join(folder_path, latest_subfolder, latest_file)
-    
     file_extension = filename.rsplit('.', 1)[1].lower()
     if file_extension == 'jpg':
-        return send_from_directory(directory,latest_file) #shows the result in seperate tab
+        return send_from_directory(directory,latest_file) 
     else:
         return "Invalid file format"
 
@@ -73,5 +70,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
     app.run(port=args.port)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)

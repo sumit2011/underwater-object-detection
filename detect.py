@@ -35,7 +35,6 @@ while True:
         print("Can't receive frame (stream end?). Exiting ...")
         break
 
-    # Predict on image
     detect_params = model.predict(source=[frame], conf=0.45, save=False)
 
     DP = detect_params[0].numpy()
