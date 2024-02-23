@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Setting up the icons which is used */
+.icons {
+    width: 50px;
+    height: 50px;
+    padding-right: 10px;
+}
+
+a:hover {
+    opacity: 60%;
+}
+/* Now Deal with Navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aqua;
+    height: 80px;
+    padding: 30px;
+    box-shadow: 1px 3px lightblue;
+    position: sticky;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo > h1 {
+    text-decoration: none;
+    color: black;
+    font-size: 36px;
+}
+
+.rest {
+    display: flex;
+    align-items: center;
+}
+
+.rest > h2 {
+    margin-left: 80px;
+    margin-right: 10px;
+}
+
+/* Now style main body */
+main {
+    display: flex;
+    margin: 50px;
+}
+#image-content {
+    /* background-color: gold; */
+    margin: 0px 100px 10px 180px;
+    height: 350px;
+    width: 400px;
+}
+
+#image-content > img {
+    height: 100%;
+    margin: 2px 50px 10px;
+}
+
+#image-content > h1 {
+    color: rgb(69, 69, 69);
+    font-weight: 700px;
+    font-size: 2.5rem;
+    font-family: Poppins,sans-serif;
+    text-align: center;
+}
+
+#image-content > p {
+    color: rgb(69, 69, 69);
+    font-size: 1.25rem;
+    text-align: center !important;
+    padding-top: 10px;
+    opacity: 60%;
+}
+
+#upload-section {
+    background-color:aquamarine;
+    box-shadow: 2px 2px 15px 8px lightgray;
+    height: 300px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 150px;
+    margin-left: 30px;
+    border-radius: 20px;
+}
+
+#upload-label {
+    font-size: 1.5em; /* Adjust the font size as needed */
+    cursor: pointer; 
+}
+
+.moon {
+    margin: 20px;
+}
+
+/*  for the detect image button */
+#detect-btn {
+    background-color: #0f70e6;
+    height: 50px;
+    width: 200px;
+    margin-top: 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-width: 3px !important;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#detect-btn:hover {
+    background-color: #4395f8;
+}
+
+/* Styling the description */
+footer {
+    background-image: url(https://static.remove.bg/seperator-start.svg);
+    background-repeat: repeat-x;
+    width: 1515px;
+    height: 320px;
+    background-color: aqua;
+}
+
+.icons-1 {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+/* Now Deal with footer */
+
+.footer-flex {
+    display: flex;
+    color: rgb(69, 69, 69);
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-footer {
+    width: 250px;
+    align-items: center;
+}
+.content-footer > h2 {
+    padding-bottom: 15px;
+    text-decoration: underline;
+}
+.content-footer > p {
+    font-size: 16px;
+}
+
+.contributer {
+    margin-top: 45px;
+}
+
+.contributer > h2 {
+    padding-left: 20px;
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+
+.term-conditions > h2{
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+.term-conditions > p {
+    line-height: 2rem;
+}
+
+.teacher > h2{
+    text-decoration: underline;
+    padding-bottom: 30px;
+}
+
+.teacher > p {
+    padding-top: 10px;
+}
+
+/* Slider Updated or Discription*/
+
+.description {
+    margin: 50px;
+}
+
+.description > h1 {
+    margin-top: 100px;
+    color: rgb(69, 69, 69);
+    font-weight: 700px;
+    font-size: 4rem;
+    font-family: Poppins,sans-serif;
+    text-align: center;
+}
+.images-slider{
+    display: flex;
+    align-items: center;
+    color: rgb(69, 69, 69);
+    font-family: Poppins,sans-serif;
+    text-align: center;
+    font-size: 2rem;
+
+    /* justify-content: space-between; */
+}
+
+.slider{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.slider > img {
+    width: 85%;
+    box-shadow: 2px 2px 15px 8px lightgray;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.line{
+    height: 3px;
+    width: 700px;
+    background-color: rgb(69, 69, 69);
+    margin-left: 25%;
+    margin-top: 10px;
+}
+
+.copyright > p{
+    margin: 0 40%;
+}
+
+/*  This is done of the css */
