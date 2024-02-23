@@ -133,6 +133,7 @@ footer {
 .icons-1 {
     height: 20px;
     width: 20px;
+    margin-right: 5px;
 }
 
 /* Now Deal with footer */
@@ -230,4 +231,8 @@ footer {
     background-color: rgb(69, 69, 69);
     margin-left: 25%;
     margin-top: 10px;
+}
+
+.copyright > p{
+    margin: 0 40%;
 }
