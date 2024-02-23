@@ -29,6 +29,7 @@ nav {
 .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .logo > h1 {
