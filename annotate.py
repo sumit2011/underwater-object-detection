@@ -16,7 +16,7 @@ def allowed_file(filename):
 
 @app.route('/')
 def index():
-    return render_template('annotation.html')
+    return render_template('annotate.html')
 
 
         
