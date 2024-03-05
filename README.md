@@ -7,34 +7,31 @@ The Underwater Object Detection WebApp is an intuitive online tool for marine re
 </p>
 
 ## Detection
-### Step 1:
-### Clone the repository.
+* Step 1: Clone the repository.
 ```bash
 git clone https://github.com/sumit2011/underwater-object-detection
 ```
 
-### Step 2:
+* Step 2: Create and activate virtual environment.
 > for linux
-### Create virtual environment.
 ```bash
 virtualenv myenv
 ```
-### Activate virtual environment.
 ```bash
 source myenv/bin/activate
 ```
 
 
-### Step 3: Installing require modules.
+* Step 3: Installing require modules.
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 4: Run the script.
+* Step 4: Run the script.
 ```bash
 python -u app.py
 ```
-### Step 5: Open the link 
+* Step 5: Open the link 
 
 
 ## log output
@@ -67,6 +64,7 @@ image0.jpg
 This project is an online annotation tool designed to facilitate the annotation process for YOLO format datasets used in object detection tasks. The tool provides a user-friendly interface for labeling images with bounding boxes around objects of interest and assigning corresponding class labels. It aims to streamline the annotation workflow, making it easier and more efficient for researchers and developers to create annotated datasets for training YOLO-based object detection models.
 
 ## Getting Started:
+
 To use the annotation tool, follow these steps:
 
 1. Clone the repository:
@@ -101,3 +99,23 @@ To use the annotation tool, follow these steps:
 ![Demo Video](static/images/demo.gif)
 
 ## log output:
+
+```bash
+┌──(sumit㉿mr-nob0dy)-[~/Desktop/underwater_object_detection]
+└─$ python -u annotate.py 
+ * Serving Flask app 'annotate'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 134-459-391
+127.0.0.1 - - [05/Mar/2024 19:40:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2024 19:40:51] "GET /static/styles/annotate.css HTTP/1.1" 304 -
+127.0.0.1 - - [05/Mar/2024 19:40:51] "GET /static/js/annotate.js HTTP/1.1" 304 -
+Image saved at: /home/sumit/Desktop/underwater_object_detection/uploads2/image11.jpg
+127.0.0.1 - - [05/Mar/2024 19:41:02] "POST /upload HTTP/1.1" 200 -
+Annotation saved at: /home/sumit/Desktop/underwater_object_detection/annotations/image11.txt
+127.0.0.1 - - [05/Mar/2024 19:41:23] "POST /save_annotation HTTP/1.1" 200 -
+```
