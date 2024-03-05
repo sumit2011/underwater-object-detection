@@ -1,8 +1,8 @@
 var canvas = new fabric.Canvas('canvas');
 var uploadedImage;
 var isDrawingMode = false;
-var imageFilename = null;  //////
-var classIds = []; // Array to store class IDs for each rectangle
+var imageFilename = null;  
+var classIds = []; 
 
 function uploadImage() {
   var input = document.getElementById('imageUploadInput');
@@ -16,12 +16,13 @@ function uploadImage() {
   
   reader.onload = function(event) {
     var imageUrl = event.target.result;
-    imageFilename = file.name;  //////
+    imageFilename = file.name;  
     loadImageToCanvas(imageUrl);
   };
   
   reader.readAsDataURL(file);
 }
+
 
 function loadImageToCanvas(imageUrl) {
   fabric.Image.fromURL(imageUrl, function(img) {
@@ -38,7 +39,7 @@ function loadImageToCanvas(imageUrl) {
 
 function enableDrawing() {
   isDrawingMode = !isDrawingMode;
-  canvas.isDrawingMode = false; // Disable free-drawing mode
+  canvas.isDrawingMode = false; 
   canvas.selection = !isDrawingMode;
   canvas.forEachObject(function(obj) {
     obj.selectable = !isDrawingMode;
@@ -86,7 +87,7 @@ function resizeRectangle(event) {
 function stopDrawing() {
   canvas.getActiveObject().setCoords();
   canvas.renderAll();
-  classIds.push(document.getElementById('classId').value); // Store the current class ID
+  classIds.push(document.getElementById('classId').value); 
   enableDrawing();
 }
 
@@ -95,7 +96,7 @@ document.getElementById('saveAnnotation').addEventListener('click', function() {
         var objects = canvas.getObjects().map((obj, index) => {
             var rect = obj.aCoords;
             return {
-                class_id: classIds[index], // Retrieve the class ID from the stored array
+                class_id: classIds[index], 
                 img_width: uploadedImage.width,
                 img_height: uploadedImage.height,
                 left: rect.bl.x,
@@ -106,7 +107,7 @@ document.getElementById('saveAnnotation').addEventListener('click', function() {
         });
 
         var annotation = {
-            image_filename: imageFilename,   //////
+            image_filename: imageFilename,   
             annotation: objects
         };
 
@@ -120,7 +121,7 @@ document.getElementById('saveAnnotation').addEventListener('click', function() {
         .then(response => response.json())
         .then(data => {
             alert('Annotation saved successfully.');
-            classIds = []; // Clear the class ID array after saving
+            classIds = []; 
         })
         .catch(error => console.error('Error:', error));
     }
