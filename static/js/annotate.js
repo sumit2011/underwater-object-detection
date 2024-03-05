@@ -122,6 +122,7 @@ document.getElementById('saveAnnotation').addEventListener('click', function() {
         .then(data => {
             alert('Annotation saved successfully.');
             classIds = []; 
+            window.location.reload();
         })
         .catch(error => console.error('Error:', error));
     }
