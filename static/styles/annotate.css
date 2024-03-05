@@ -2,11 +2,21 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: whitesmoke;
 }
 
 h1 {
   text-align: center;
-  
+  background-color: aqua;
+  margin-top: 0%;
+  height: 80px;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  font-weight: 700px;
+  font-size: 2.5rem;
+  font-family: Poppins,sans-serif;
+  box-shadow: 1px 3px lightblue;
 }
 
 #imageFilename {
@@ -26,6 +36,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1.15rem;
 }
 
 button:hover {
@@ -47,5 +58,62 @@ canvas {
   display: block;
   margin: 0 auto;
   border: 2px solid black;
-  margin-left: 70%;
+  
+  /* padding-left: 20%; */
+  
+
+}
+
+
+
+.container {
+  display: flex;
+  /* background-color: red; */
+  margin-right: 5%;
+}
+
+
+
+.instruction-box {
+  box-shadow: 2px 2px 15px 8px rgb(92, 88, 88);
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  margin: 20px auto;
+  margin-top: 40px;
+  /* float: left; */
+}
+
+.instruction-box h2 {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.instruction-box p {
+  font-size: 1.25em;
+  line-height: 1.4;
+}
+
+.instruction-box2 {
+  background-color: whitesmoke;
+  border: none;
+  /* padding: 20px; */
+  /* border-radius: 5px; */
+  width: 150px;
+  /* margin: 20px auto; */
+  margin-top: 40px;
+  margin-right: 10px;
+  /* float: left; */
+}
+
+.instruction-box2 h2 {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.instruction-box2 p {
+  font-size: 1.25em;
+  line-height: 1.4;
 }

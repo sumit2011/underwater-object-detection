@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <h1>Annotate Image: <span id="imageFilename"></span></h1>
+  <h1>Online Annotation Tool <span id="imageFilename"></span></h1>
   <form method="POST" action="/upload" enctype="multipart/form-data">
     <input type="file" name="file" accept="image/*" id="imageUploadInput">
     <button onclick="uploadImage()">Upload Image</button>
@@ -21,7 +21,31 @@
   <button id="saveAnnotation">Save Annotation</button>
   <label for="classId">Class ID:</label>
   <input type="number" id="classId" min="0" value="0">
-  <canvas id="canvas" width="800" height="600"></canvas>
+  <!-- <canvas id="canvas" width="800" height="600"></canvas> -->
+  <div class="container">
+    <div class="instruction-box">
+      <h2>Instructions:</h2>
+      <p>1. Choose the image.<br>
+         2. Click on upload button.<br>
+         3. Change the class according to the name.<br>
+         4. Click on draw Rectangle.<br>
+         5. Draw the Rectangle.<br>
+         6. Click on save annotation.<br>
+      </p>
+    </div>
+    <div class="instruction-box2">
+      <h2>Classes</h2>
+      <p>0 -> fish<br>
+         1 -> jellyfish<br>
+         2 -> penguin<br>
+         3 -> puffin<br>
+         4 -> shark<br>
+         5 -> starfish<br>
+         6 -> stingray<br>
+      </p>
+    </div>
+    <canvas id="canvas" width="800" height="600"></canvas>
+  </div>
   <script src="{{ url_for('static', filename='js/annotate.js') }}"></script>
 
 </body>
