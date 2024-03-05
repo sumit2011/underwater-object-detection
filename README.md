@@ -100,7 +100,7 @@ To use the annotation tool, follow these steps:
 
 ## log output:
 
-```bash
+```python
 ┌──(sumit㉿mr-nob0dy)-[~/Desktop/underwater_object_detection]
 └─$ python -u annotate.py 
  * Serving Flask app 'annotate'
@@ -119,3 +119,26 @@ Image saved at: /home/sumit/Desktop/underwater_object_detection/uploads2/image11
 Annotation saved at: /home/sumit/Desktop/underwater_object_detection/annotations/image11.txt
 127.0.0.1 - - [05/Mar/2024 19:41:23] "POST /save_annotation HTTP/1.1" 200 -
 ```
+
+
+project_name/
+│
+├── app/
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── models.py
+│   ├── forms.py
+│   ├── static/
+│   │   └── css/
+│   │   └── js/
+│   │   └── img/
+│   ├── templates/
+│   │   └── base.html
+│   │   └── index.html
+│   │   └── ... (other HTML templates)
+│   └── ... (other modules or packages)
+│
+├── config.py
+├── requirements.txt
+└── run.py
+
