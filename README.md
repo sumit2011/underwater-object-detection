@@ -69,11 +69,11 @@ To use the annotation tool, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/yolo-annotation-tool.git
+    git clone https://github.com/sumit2011/underwater-object-detection.git
     ```
 2. Go to the main directory:
     ```bash
-        cd yolo-annotation-tool
+        cd underwater-object-detection
     ```
 3. Install flask and other dependencies:
 
