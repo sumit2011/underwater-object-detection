@@ -121,24 +121,3 @@ Annotation saved at: /home/sumit/Desktop/underwater_object_detection/annotations
 ```
 
 
-project_name/
-│
-├── app/
-│   ├── __init__.py
-│   ├── routes.py
-│   ├── models.py
-│   ├── forms.py
-│   ├── static/
-│   │   └── css/
-│   │   └── js/
-│   │   └── img/
-│   ├── templates/
-│   │   └── base.html
-│   │   └── index.html
-│   │   └── ... (other HTML templates)
-│   └── ... (other modules or packages)
-│
-├── config.py
-├── requirements.txt
-└── run.py
-
