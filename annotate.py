@@ -41,7 +41,7 @@ def upload():
         file.save(image_path)
         print("Image saved at:", image_path) 
         # return jsonify({'success': True})
-        return render_template('aleart.html', message='Image uploaded successfully!')
+        return render_template('alert.html', message='Image uploaded successfully!')
     
     return jsonify({'error': 'Invalid file format'})
 
