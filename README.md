@@ -1,17 +1,19 @@
 # Underwater-Object-Detection using YOLOv8.1
 ![image](static/images/2.png)  
 
+## Introduction
 <p>
 The Underwater Object Detection WebApp is an intuitive online tool for marine researchers, underwater explorers. Users can detect and classify submerged objects such as wreckage or marine life, visualize results through interactive image galleries. With its user-friendly interface and powerful capabilities, the web app facilitates efficient underwater exploration.
 </p>
 
-## Step 1:
+## Detection
+### Step 1:
 ### Clone the repository.
 ```bash
 git clone https://github.com/sumit2011/underwater-object-detection
 ```
 
-## Step 2:
+### Step 2:
 > for linux
 ### Create virtual environment.
 ```bash
@@ -23,19 +25,16 @@ source myenv/bin/activate
 ```
 
 
-## Step 3:
-### Installing require modules.
+### Step 3: Installing require modules.
 ```bash
 pip install -r requirements.txt
 ```
 
-## Step 4:
-### Run the script.
+### Step 4: Run the script.
 ```bash
 python -u app.py
 ```
-## Step 5:
-### open the link 
+### Step 5: Open the link 
 
 
 ## log output
@@ -61,5 +60,44 @@ image0.jpg
 127.0.0.1 - - [23/Feb/2024 21:10:28] "POST / HTTP/1.1" 200 -
 ```
 
+# Annotation or labeling tool
 
+![image](static/images/1.png)  
 
+This project is an online annotation tool designed to facilitate the annotation process for YOLO format datasets used in object detection tasks. The tool provides a user-friendly interface for labeling images with bounding boxes around objects of interest and assigning corresponding class labels. It aims to streamline the annotation workflow, making it easier and more efficient for researchers and developers to create annotated datasets for training YOLO-based object detection models.
+
+## Getting Started:
+To use the annotation tool, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/yolo-annotation-tool.git
+    ```
+2. Go to the main directory:
+    ```bash
+        cd yolo-annotation-tool
+    ```
+3. Install flask and other dependencies:
+
+4. Start the server:
+    ```bash
+    python annotate.py
+    # Access the application at http://localhost:5000 in your web browser
+    ```
+5. Upload images that you want to annotate.
+6. Draw bounding boxes around objects in the images and assign class labels.
+7. Save annotation.
+
+## Processes involved in the labeling:
+
+1. It will take the image from user and saved to the `uploads2` folder.
+2. After that it will load the image to the canva container for annotation.
+3. Now user can label the objects in the image according to the class ids.
+4. Now click on the `save annotation` button.
+5. It will save the annotation file in yolo format in the annotations folder.
+6. Name of the annotation file will be same as the image filename.
+
+## Demo
+![Demo Video](static/images/demo.gif)
+
+## log output:
